@@ -43,10 +43,14 @@ public class Main
             }
         });
 
-        for (HashMap.Entry<String, Integer> d : sortedMap)
-        {
-            System.out.println("value: " + d.getValue());
-        }
-        System.out.println();
+        // for (HashMap.Entry<String, Integer> d : sortedMap)
+        // {
+        //     System.out.println("value: " + d.getValue());
+        // }
+        // System.out.println();
+        for (int i = 0; i < 50; i++)
+                 {
+                     System.out.println("Words: " + sortedMap.get(i).getKey() + " Values = " + sortedMap.get(i).getValue());
+                 }
     } 
 }
