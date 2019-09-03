@@ -32,5 +32,21 @@ public class Main
         }
         System.out.println(unHashMap.size());
 
+        ArrayList<HashMap.Entry<String, Integer>> sortedMap = new ArrayList<HashMap.Entry<String, Integer>>();
+        sortedMap.addAll(unHashMap.entrySet());
+
+        Collections.sort(sortedMap, new Comparator<HashMap.Entry<String, Integer>>() 
+        {
+            public int compare(HashMap.Entry<String, Integer> o1, HashMap.Entry<String, Integer> o2)
+            {
+                return o2.getValue() - (o2.getValue());
+            }
+        });
+
+        for (HashMap.Entry<String, Integer> d : sortedMap)
+        {
+            System.out.println("value: " + d.getValue());
+        }
+        System.out.println();
     } 
 }
